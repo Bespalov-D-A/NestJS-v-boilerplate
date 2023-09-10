@@ -4,7 +4,6 @@ RUN apk update apk add --no-cache postgresql postgresql-client
 WORKDIR /server
 COPY package*.json ./
 EXPOSE 5000
-RUN npm i --save
 ENV NODE_ENV development
 COPY . .
 CMD ["npm", "run", "start:dev"]

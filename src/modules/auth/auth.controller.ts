@@ -57,6 +57,9 @@ export class AuthController {
         password: candidate.password,
       })
     } else {
+      console.log('###################################################331y')
+      console.log('###################################################331y')
+      console.log(req.user)
       const password = randomstring.generate(12)
       body = await this.authService.registration({ ...req.user, password });
     }

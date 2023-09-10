@@ -36,7 +36,7 @@ export class AuthService {
       ...userDto,
       password: hashPassword,
     });
-
+    
     return {
       access_token: this.jwtService.sign({
         email: user.email,

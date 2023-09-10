@@ -1,7 +1,6 @@
 import { daysToMilliseconds } from "src/helpers/minor-functions";
 
 const {
-  GOOGLE_CLIENT_ID,
   GOOGLE_SECRET,
   GOOGLE_CALLBACK,
   CLIENT_PORT,
@@ -9,12 +8,13 @@ const {
   CLIENT_HOST
 } = process.env;
 
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID
+
 export const clientUrl  = `${CLIENT_PROTOCOL}://${CLIENT_HOST}:${CLIENT_PORT}`
 
 //use nginx proxy to use http://client.com/api/callback --> but to show http://server.com/api/callback
 //GOOGLE_CALLBACK should contain "/api" because need proxy
 const callbackUrl = `${clientUrl}/${GOOGLE_CALLBACK}`;
-
 export const config = {
   cookie: {
     lifeTime: daysToMilliseconds(30) //30 days
@@ -25,3 +25,9 @@ export const config = {
     callbackURL: callbackUrl,
   },
 };
+
+
+console.log('fffffffffffffffffffff')
+console.log(config)
+console.log('fffffffffffffffffffff')
+console.log(process.env)

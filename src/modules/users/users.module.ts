@@ -8,6 +8,7 @@ import { Role } from '../roles/roles.model';
 import { UserRoles } from '../roles/userroles.model';
 import { Post } from '../posts/posts.model';
 import { RolesModule } from '../roles/roles.module';
+import { DefaultConfigOptionsModule } from '../default-config-options/default-config-options.module';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { RolesModule } from '../roles/roles.module';
     forwardRef(() => AuthModule),
   ],
   controllers: [UsersController],
-  providers: [UsersService],
+  providers: [UsersService ],
   exports: [UsersService],
 })
 export class UsersModule {}

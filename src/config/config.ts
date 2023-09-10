@@ -25,9 +25,3 @@ export const config = {
     callbackURL: callbackUrl,
   },
 };
-
-
-console.log('fffffffffffffffffffff')
-console.log(config)
-console.log('fffffffffffffffffffff')
-console.log(process.env)
